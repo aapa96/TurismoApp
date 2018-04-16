@@ -24,12 +24,12 @@ app.use((req,res,next)=>{
 
 // //rutas
 var usuario_routes = require('./Usuario/rutas');
-// var categoria_routes = require('./ApiRutas/categoria');
+var categoria_routes = require('./Categoria/rutas');
 
 // //rutas base 
 
 app.use('/api',usuario_routes);
-// app.use('/api',categoria_routes);
+app.use('/api',categoria_routes);
 
 
 
