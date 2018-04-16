@@ -1,0 +1,35 @@
+{
+  "name": "turismoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ".",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aapa96/TurismoApp.git"
+  },
+  "keywords": [
+    "turismo",
+    "app",
+    "mongodb",
+    "express",
+    "nodejs"
+  ],
+  "author": "Alex Paredes Aranzamendi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aapa96/TurismoApp/issues"
+  },
+  "homepage": "https://github.com/aapa96/TurismoApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
