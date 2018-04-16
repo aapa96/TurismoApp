@@ -21,6 +21,10 @@ app.use((req,res,next)=>{
 	next();
 });
 
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
+
 // //rutas
 // var usuario_routes = require('./ApiRutas/usuario');
 // var categoria_routes = require('./ApiRutas/categoria');
