@@ -22,7 +22,7 @@ function createUser(req,res){
 	user.create = Date.now();
 
 	
-	if(params.name != null && params.surname != null && params.email != null && params.password != null && params.birthday != null ){
+	if(params.name != null && params.surname != null && params.email != null && params.password != null){
 		User.findOne({email:params.email.toLowerCase()},(err,userFind)=>{
 			if(userFind){
 				res.status(400).send({message:"Usuario ya registrado"});
