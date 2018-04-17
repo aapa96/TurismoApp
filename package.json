@@ -26,14 +26,23 @@
   "homepage": "https://github.com/aapa96/TurismoApp#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "connect-multiparty": "^2.1.0",
+    "ejs": "^2.5.8",
+    "email-templates": "^3.5.2",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "fs": "0.0.1-security",
     "jwt-simple": "^0.5.1",
     "moment": "^2.22.1",
     "mongoose": "^5.0.14",
-    "mongoose-pagination": "^1.0.0"
+    "mongoose-pagination": "^1.0.0",
+    "nodemailer": "^4.6.4",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-twitter": "^1.0.4"
   },
   "devDependencies": {
     "nodemon": "^1.17.3"

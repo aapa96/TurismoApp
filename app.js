@@ -2,6 +2,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var nodeMailer = require('nodemailer');
 var path = require('path');
 
 
@@ -25,11 +26,13 @@ app.use((req,res,next)=>{
 // //rutas
 var usuario_routes = require('./Usuario/rutas');
 var categoria_routes = require('./Categoria/rutas');
+var nodemailer_routes = require('./Nodemailer/rutas');
 
 // //rutas base 
 
 app.use('/api',usuario_routes);
 app.use('/api',categoria_routes);
+app.use('/api',nodemailer_routes);
 
 
 
