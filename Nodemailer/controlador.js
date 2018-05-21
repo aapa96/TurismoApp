@@ -3,6 +3,7 @@
 var nodeMailer = require('nodemailer');
 var fs = require('fs');
 var path = require('path');
+var contacto = require('./modelo');
 
 function pruebas(req,res){
 	res.status(200).send({
@@ -85,6 +86,12 @@ function Contacto (req,res){
 
 
 function ContactJavaNation(req,res){
+
+    let params = req.body;
+    var message = Mensaja();
+    this.message.name = params.name;
+    this.message.email = params.email;
+    this.message.text = params.text;
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
@@ -96,14 +103,14 @@ function ContactJavaNation(req,res){
     });
     
     let mailOptions = {
-        from: '"Java Nation | Web Page"'+req.body.email, // sender address
+        from: '"Java Nation | Web Page"'+this.message.name, // sender address
         to: 'aapa96@gmail.com', // list of receivers
         subject: "Private Event", // Subject line
         text: req.body.text, // plain text body
         html: '<h1>Java Nation | Private Event </h1>'+'<br>'+
-                '<h6>'+'Name: '+'</h6>'+'<p>'+req.body.name+'</p>'+'<br>'+
-                '<h6>'+'Email: '+'</h6>'+'<p>'+req.body.email+'</p>'+'<br>'+
-                '<h6>'+'Message: '+'</h6>'+'<p>'+req.body.text+'</p>'+'<br>'+
+                '<h6>'+'Name: '+'</h6>'+'<p>'+this.message.name+'</p>'+'<br>'+
+                '<h6>'+'Email: '+'</h6>'+'<p>'+this.message.email+'</p>'+'<br>'+
+                '<h6>'+'Message: '+'</h6>'+'<p>'+this.message.text+'</p>'+'<br>'+
                 '<img src="cid:unique@cid"/>',
             attachments: [{
                 filename: 'Prueba.jpg',

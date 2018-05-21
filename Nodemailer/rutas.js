@@ -9,7 +9,7 @@ api.get('/ControladorN',NodemailerController.pruebas);
 api.post('/registrarseEmail',NodemailerController.registrarse);
 api.post('/Contacto',NodemailerController.Contacto);
 
-api.post('/JavaNation/Contact',NodemailerController.ContactJavaNation);
+api.post('/JavaNationContact',NodemailerController.ContactJavaNation);
 
 
 module.exports=api;

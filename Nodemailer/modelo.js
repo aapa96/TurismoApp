@@ -6,8 +6,7 @@ let Schema = mongoose.Schema;
 let MensajeSchema = new Schema({
 	name: String,
     email: String,
-    subject:String,
-    mensaje: String
+    text: String
 });
 
 module.exports = mongoose.model('Mensaje', MensajeSchema);
