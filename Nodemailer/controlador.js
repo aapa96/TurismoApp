@@ -88,7 +88,7 @@ function Contacto (req,res){
 function ContactJavaNation(req,res){
 
     let params = req.body;
-    var message = Mensaje();
+    var message = contacto();
     this.message.name = params.name;
     this.message.email = params.email;
     this.message.text = params.text;
