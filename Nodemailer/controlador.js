@@ -102,8 +102,8 @@ function ContactJavaNation(req,res){
         text: req.body.text, // plain text body
         html: '<h1>Java Nation | Private Event </h1>'+'<br>'+
                 '<h6>'+'Name: '+'</h6>'+'<p>'+req.body.name+'</p>'+'<br>'+
-                '<h6>'+'Email: '+'</h6>'+'<p>'+req.body.text+'</p>'+'<br>'+
-                '<h6>'+'Message: '+'</h6>'+'<p>'+req.body.email+'</p>'+'<br>'+
+                '<h6>'+'Email: '+'</h6>'+'<p>'+req.body.email+'</p>'+'<br>'+
+                '<h6>'+'Message: '+'</h6>'+'<p>'+req.body.text+'</p>'+'<br>'+
                 '<img src="cid:unique@cid"/>',
             attachments: [{
                 filename: 'Prueba.jpg',
