@@ -88,10 +88,10 @@ function Contacto (req,res){
 function ContactJavaNation(req,res){
 
     let params = req.body;
-    var message = contacto();
-    this.message.name = params.name;
-    this.message.email = params.email;
-    this.message.text = params.text;
+    // var message = contacto();
+    var name = params.name;
+    var email = params.email;
+    var message = params.text;
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
@@ -108,9 +108,9 @@ function ContactJavaNation(req,res){
         subject: "Private Event", // Subject line
         text: req.body.text, // plain text body
         html: '<h1>Java Nation | Private Event </h1>'+'<br>'+
-                '<h6>'+'Name: '+'</h6>'+'<p>'+this.message.name+'</p>'+'<br>'+
-                '<h6>'+'Email: '+'</h6>'+'<p>'+this.message.email+'</p>'+'<br>'+
-                '<h6>'+'Message: '+'</h6>'+'<p>'+this.message.text+'</p>'+'<br>'+
+                '<h6>'+'Name: '+'</h6>'+'<p>'+name+'</p>'+'<br>'+
+                '<h6>'+'Email: '+'</h6>'+'<p>'+email+'</p>'+'<br>'+
+                '<h6>'+'Message: '+'</h6>'+'<p>'+message+'</p>'+'<br>'+
                 '<img src="cid:unique@cid"/>',
             attachments: [{
                 filename: 'Prueba.jpg',
