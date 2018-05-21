@@ -7,6 +7,9 @@ var api = express.Router();
 
 api.get('/ControladorN',NodemailerController.pruebas);
 api.post('/registrarseEmail',NodemailerController.registrarse);
+api.post('/Contacto',NodemailerController.Contacto);
+
+api.post('/JavaNation/Contact',NodemailerController.ContactJavaNation);
 
 
 module.exports=api;
