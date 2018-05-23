@@ -11,6 +11,7 @@ api.post('/Contacto',NodemailerController.Contacto);
 
 api.post('/JavaNationContact',NodemailerController.ContactJavaNation);
 api.post('/JavaNationPrivateEvent',NodemailerController.privateEventJavaNation);
+api.post('/JavaNationGetCitizenShip',NodemailerController.GetCitizenShip);
 
 
 

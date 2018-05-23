@@ -198,11 +198,54 @@ function privateEventJavaNation(req,res){
 
 }
 
+function GetCitizenShip(){
+    let params = req.body;
+    // var message = contacto();
+    var name = params.name;
+    var email = params.email;
+    let transporter = nodeMailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: 'aapa96@gmail.com',
+            pass: '958897198'
+        }
+    });
+    
+    let mailOptions = {
+        from: '"Java Nation | Web Page"'+name, // sender address
+        to: 'aapa96@gmail.com', // list of receivers
+        subject: "Citizenship", // Subject line
+        text: req.body.text, // plain text body
+        html: '<h1>Java Nation | Contact Form </h1>'+'<br>'+
+                '<h6>'+'Name: '+'</h6>'+'<p>'+name+'</p>'+'<br>'+
+                '<h6>'+'Email: '+'</h6>'+'<p>'+email+'</p>'+'<br>'+
+                '<img src="cid:unique@cid"/>',
+            attachments: [{
+                filename: 'Prueba.jpg',
+                path: './Uploads/Prueba.jpg',
+                cid: 'unique@cid' //same cid value as in the html img src
+            }]
+    };
+
+
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message %s sent: %s', info.messageId, info.response);
+            res.status(200).send({message:"Mensaje enviado satisfactoriamente gracias.",mailOptions});
+        });
+}
+
 module.exports = {
 
     pruebas,
     registrarse,
     Contacto,
     ContactJavaNation,
-    privateEventJavaNation
+    privateEventJavaNation,
+    GetCitizenShip
 };
