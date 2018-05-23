@@ -162,7 +162,7 @@ function privateEventJavaNation(req,res){
     });
     
     let mailOptions = {
-        from: '"Java Nation | Web Page"'+name, // sender address
+        from: '"Java Nation | Web Page"', // sender address
         to: 'aapa96@gmail.com', // list of receivers
         subject: "Private Event", // Subject line
         text: req.body.text, // plain text body
