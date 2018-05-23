@@ -146,10 +146,7 @@ function privateEventJavaNation(req,res){
     var cake = params.cake;
     var message = params.message;
 
-    if( fullname != '' && email != '' && phone != '' && date != '' && people != '' &&  birthday != '' && business != '' && personal != '' && 
-            other != '' && dj != '' && catering != '' && cake != '' && message != ''){
 
-            
 
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
@@ -194,14 +191,12 @@ function privateEventJavaNation(req,res){
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            return res.json("No se envio su mensaje.")
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
             res.status(200).send({message:"Mensaje enviado satisfactoriamente gracias.",mailOptions});
         });
 
-    } else{
-        res.json("Llene todos los campos gracias.")
     }
 }
 
