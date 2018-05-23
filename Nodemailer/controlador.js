@@ -198,7 +198,7 @@ function privateEventJavaNation(req,res){
 
 }
 
-function GetCitizenShip(){
+function GetCitizenShip(req,res){
     let params = req.body;
     // var message = contacto();
     var name = params.name;
