@@ -147,7 +147,6 @@ function privateEventJavaNation(req,res){
     var message = params.message;
 
 
-
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
@@ -191,13 +190,12 @@ function privateEventJavaNation(req,res){
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return res.json("No se envio su mensaje.")
+            return console.log(error);
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
             res.status(200).send({message:"Mensaje enviado satisfactoriamente gracias.",mailOptions});
         });
 
-    }
 }
 
 module.exports = {
