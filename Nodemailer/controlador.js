@@ -105,7 +105,7 @@ function ContactJavaNation(req,res){
     let mailOptions = {
         from: '"Java Nation | Web Page"'+name, // sender address
         to: 'aapa96@gmail.com', // list of receivers
-        subject: "Private Event", // Subject line
+        subject: "Contact Form", // Subject line
         text: req.body.text, // plain text body
         html: '<h1>Java Nation | Contact Form </h1>'+'<br>'+
                 '<h6>'+'Name: '+'</h6>'+'<p>'+name+'</p>'+'<br>'+
@@ -218,7 +218,7 @@ function GetCitizenShip(req,res){
         to: 'aapa96@gmail.com', // list of receivers
         subject: "Citizenship", // Subject line
         text: req.body.text, // plain text body
-        html: '<h1>Java Nation | Contact Form </h1>'+'<br>'+
+        html: '<h1>Java Nation | Citizenship </h1>'+'<br>'+
                 '<h6>'+'Name: '+'</h6>'+'<p>'+name+'</p>'+'<br>'+
                 '<h6>'+'Email: '+'</h6>'+'<p>'+email+'</p>'+'<br>'+
                 '<img src="cid:unique@cid"/>',
